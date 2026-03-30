@@ -320,3 +320,206 @@ export default function App() {
           )}
         </section>
   
+  {/* --- STEPS SECTION --- */}
+        <section className="bg-white py-16 md:py-24 border-t border-gray-50">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900">
+              Get Started In 3 Steps
+            </h2>
+            <p className="text-gray-500 text-sm mb-12">
+              Start using premium digital tools in minutes, not hours.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Step 1 */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
+                <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
+                  01
+                </span>
+                <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
+                  <User className="w-6 h-6" />
+                </div>
+                <h3 className="text-base font-bold mb-2 text-gray-900">
+                  Create Account
+                </h3>
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  Sign up for free in seconds. No credit card required to get
+                  started.
+                </p>
+              </div>
+  
+              {/* Step 2 */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
+                <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
+                  02
+                </span>
+                <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
+                  <Box className="w-6 h-6" />
+                </div>
+                <h3 className="text-base font-bold mb-2 text-gray-900">
+                  Choose Products
+                </h3>
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  Browse our catalog and select the tools that fit your needs.
+                </p>
+              </div>
+  
+              {/* Step 3 */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
+                <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
+                  03
+                </span>
+                <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
+                  <Rocket className="w-6 h-6" />
+                </div>
+                <h3 className="text-base font-bold mb-2 text-gray-900">
+                  Start Creating
+                </h3>
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  Download and start using your premium tools immediately.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        {/* --- PRICING SECTION --- */}
+        <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-2 text-gray-900">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-gray-500 text-sm">
+              Choose the plan that fits your needs. Upgrade or downgrade anytime.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            {/* Starter */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col justify-between h-full hover:shadow-sm transition">
+              <div>
+                <h3 className="text-lg font-bold mb-1 text-gray-900">Starter</h3>
+                <p className="text-gray-400 text-xs mb-4">
+                  Perfect for getting started
+                </p>
+                <div className="mb-6">
+                  <span className="text-3xl font-extrabold text-gray-900">
+                    $0
+                  </span>
+                  <span className="text-gray-500 text-xs"> /Month</span>
+                </div>
+                <ul className="space-y-3 mb-6 text-xs text-gray-600">
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Access to 10
+                    free tools
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Basic
+                    templates
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Community
+                    support
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> 1 project
+                    per month
+                  </li>
+                </ul>
+              </div>
+              <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg py-2.5 transition text-sm">
+                Get Started Free
+              </button>
+            </div>
+  
+            {/* Pro */}
+            <div className="bg-violet-600 text-white rounded-xl p-8 flex flex-col justify-between h-full relative shadow-lg">
+              <span className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
+                Most Popular
+              </span>
+              <div>
+                <h3 className="text-lg font-bold mb-1">Pro</h3>
+                <p className="text-violet-200 text-xs mb-4">
+                  Best for professionals
+                </p>
+                <div className="mb-6">
+                  <span className="text-3xl font-extrabold">$29</span>
+                  <span className="text-violet-200 text-xs"> /Month</span>
+                </div>
+                <ul className="space-y-3 mb-6 text-xs">
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Access to
+                    all premium tools
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Unlimited
+                    templates
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Priority
+                    support
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Unlimited
+                    projects
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Cloud sync
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Advanced
+                    analytics
+                  </li>
+                </ul>
+              </div>
+              <button className="bg-white text-violet-600 hover:bg-gray-50 font-semibold rounded-lg py-2.5 transition text-sm">
+                Start Pro Trial
+              </button>
+            </div>
+  
+            {/* Enterprise */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col justify-between h-full hover:shadow-sm transition">
+              <div>
+                <h3 className="text-lg font-bold mb-1 text-gray-900">
+                  Enterprise
+                </h3>
+                <p className="text-gray-400 text-xs mb-4">
+                  For teams and businesses
+                </p>
+                <div className="mb-6">
+                  <span className="text-3xl font-extrabold text-gray-900">
+                    $99
+                  </span>
+                  <span className="text-gray-500 text-xs"> /Month</span>
+                </div>
+                <ul className="space-y-3 mb-6 text-xs text-gray-600">
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Everything
+                    in Pro
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Team
+                    collaboration
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Custom
+                    integrations
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Dedicated
+                    support
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> SLA
+                    guarantee
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" /> Custom
+                    branding
+                  </li>
+                </ul>
+              </div>
+              <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg py-2.5 transition text-sm">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
