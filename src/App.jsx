@@ -82,4 +82,48 @@ export default function App() {
           </div>
         </nav>
   
+   {/* --- HERO SECTION --- */}
+        <section className="bg-white py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-flex items-center text-xs font-bold text-violet-600 tracking-wide bg-violet-50 px-3 py-1.5 rounded-full">
+                <span className="w-2 h-2 bg-violet-600 rounded-full mr-2"></span>
+                New: AI-Powered Tools Available
+              </span>
+              <h1 className="text-4xl md:text-5xl font-extrabold mt-4 mb-4 leading-tight text-gray-900">
+                Supercharge Your <br />
+                Digital Workflow
+              </h1>
+              <p className="text-gray-500 text-base mb-4 max-w-lg">
+                Access premium AI tools, design assets, templates, and
+                productivity software—all in one place. Start creating faster
+                today.
+              </p>
+              <a
+                href="#"
+                className="text-violet-600 font-medium hover:underline text-sm block mb-6"
+              >
+                Explore Products
+              </a>
+              <div className="flex space-x-4 items-center">
+                <button className="bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-lg px-6 py-3 transition">
+                  Explore Products
+                </button>
+                <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg px-6 py-3 flex items-center justify-center space-x-2 transition">
+                  <Play className="w-4 h-4 mr-1 fill-current" />
+                  <span>Watch Demo</span>
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-md">
+                <img
+                  src="/banner.png"
+                  alt="Workflow Mockup"
+                  className="rounded-lg shadow-sm"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
   
