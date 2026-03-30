@@ -523,3 +523,27 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* --- CTA SECTION --- */}
+      <section className="bg-violet-600 text-white py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-3">
+            Ready To Transform Your Workflow?
+          </h2>
+          <p className="text-violet-100 text-base mb-8 max-w-2xl mx-auto">
+            Join thousands of professionals who are already using Digitools to
+            work smarter. Start your free trial today.
+          </p>
+          <div className="flex justify-center space-x-4 mb-4">
+            <button className="bg-white text-violet-600 hover:bg-gray-50 font-semibold rounded-lg px-6 py-3 transition text-sm">
+              Explore Products
+            </button>
+            <button className="border border-white text-white hover:bg-violet-700 font-semibold rounded-lg px-6 py-3 transition text-sm">
+              View Pricing
+            </button>
+          </div>
+          <p className="text-violet-200 text-xs">
+            14-day free trial • No credit card required • Cancel anytime
+          </p>
+        </div>
+      </section>
