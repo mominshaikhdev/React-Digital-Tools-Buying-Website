@@ -42,4 +42,44 @@ export default function App() {
   };
 
 
+  return (
+      <div className="min-h-screen text-gray-800 bg-white font-sans">
+        <ToastContainer position="top-right" autoClose={2000} />
+  
+        {/* --- NAVBAR --- */}
+        <nav className="bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div className="text-2xl font-bold text-violet-600">DigiTools</div>
+            <div className="hidden md:flex space-x-8 font-medium text-gray-600">
+              <a href="#" className="hover:text-violet-600 transition">
+                Products
+              </a>
+              <a href="#" className="hover:text-violet-600 transition">
+                Features
+              </a>
+              <a href="#" className="hover:text-violet-600 transition">
+                Pricing
+              </a>
+              <a href="#" className="hover:text-violet-600 transition">
+                Testimonials
+              </a>
+              <a href="#" className="hover:text-violet-600 transition">
+                FAQ
+              </a>
+            </div>
+            <div className="flex items-center space-x-6">
+              <div
+                className="flex items-center text-gray-700 hover:text-violet-600 transition cursor-pointer"
+                onClick={() => setActiveTab("cart")}
+              >
+                <ShoppingCart className="w-5 h-5 mr-1" />
+                <span className="font-medium">Login</span>
+              </div>
+              <button className="bg-violet-600 text-white font-medium hover:bg-violet-700 rounded-full px-5 py-2 transition">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </nav>
+  
   
