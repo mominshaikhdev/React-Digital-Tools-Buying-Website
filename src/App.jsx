@@ -41,490 +41,489 @@ export default function App() {
     toast.success("Proceeding to checkout! Cart cleared.");
   };
 
-
   return (
-      <div className="min-h-screen text-gray-800 bg-white font-sans">
-        <ToastContainer position="top-right" autoClose={2000} />
-  
-        {/* --- NAVBAR --- */}
-        <nav className="bg-white border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div className="text-2xl font-bold text-violet-600">DigiTools</div>
-            <div className="hidden md:flex space-x-8 font-medium text-gray-600">
-              <a href="#" className="hover:text-violet-600 transition">
-                Products
-              </a>
-              <a href="#" className="hover:text-violet-600 transition">
-                Features
-              </a>
-              <a href="#" className="hover:text-violet-600 transition">
-                Pricing
-              </a>
-              <a href="#" className="hover:text-violet-600 transition">
-                Testimonials
-              </a>
-              <a href="#" className="hover:text-violet-600 transition">
-                FAQ
-              </a>
+    <div className="min-h-screen text-gray-800 bg-white font-sans">
+      <ToastContainer position="top-right" autoClose={2000} />
+
+      {/* --- NAVBAR --- */}
+      <nav className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold text-violet-600">DigiTools</div>
+          <div className="hidden md:flex space-x-8 font-medium text-gray-600">
+            <a href="#" className="hover:text-violet-600 transition">
+              Products
+            </a>
+            <a href="#" className="hover:text-violet-600 transition">
+              Features
+            </a>
+            <a href="#" className="hover:text-violet-600 transition">
+              Pricing
+            </a>
+            <a href="#" className="hover:text-violet-600 transition">
+              Testimonials
+            </a>
+            <a href="#" className="hover:text-violet-600 transition">
+              FAQ
+            </a>
+          </div>
+          <div className="flex items-center space-x-6">
+            <div
+              className="flex items-center text-gray-700 hover:text-violet-600 transition cursor-pointer"
+              onClick={() => setActiveTab("cart")}
+            >
+              <ShoppingCart className="w-5 h-5 mr-1" />
+              <span className="font-medium">Login</span>
             </div>
-            <div className="flex items-center space-x-6">
-              <div
-                className="flex items-center text-gray-700 hover:text-violet-600 transition cursor-pointer"
-                onClick={() => setActiveTab("cart")}
-              >
-                <ShoppingCart className="w-5 h-5 mr-1" />
-                <span className="font-medium">Login</span>
-              </div>
-              <button className="bg-violet-600 text-white font-medium hover:bg-violet-700 rounded-full px-5 py-2 transition">
-                Get Started
+            <button className="bg-violet-600 text-white font-medium hover:bg-violet-700 rounded-full px-5 py-2 transition">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* --- HERO SECTION --- */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-flex items-center text-xs font-bold text-violet-600 tracking-wide bg-violet-50 px-3 py-1.5 rounded-full">
+              <span className="w-2 h-2 bg-violet-600 rounded-full mr-2"></span>
+              New: AI-Powered Tools Available
+            </span>
+            <h1 className="text-4xl md:text-5xl font-extrabold mt-4 mb-4 leading-tight text-gray-900">
+              Supercharge Your <br />
+              Digital Workflow
+            </h1>
+            <p className="text-gray-500 text-base mb-4 max-w-lg">
+              Access premium AI tools, design assets, templates, and
+              productivity software—all in one place. Start creating faster
+              today.
+            </p>
+            <a
+              href="#"
+              className="text-violet-600 font-medium hover:underline text-sm block mb-6"
+            >
+              Explore Products
+            </a>
+            <div className="flex space-x-4 items-center">
+              <button className="bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-lg px-6 py-3 transition">
+                Explore Products
+              </button>
+              <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg px-6 py-3 flex items-center justify-center space-x-2 transition">
+                <Play className="w-4 h-4 mr-1 fill-current" />
+                <span>Watch Demo</span>
               </button>
             </div>
           </div>
-        </nav>
-  
-   {/* --- HERO SECTION --- */}
-        <section className="bg-white py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-flex items-center text-xs font-bold text-violet-600 tracking-wide bg-violet-50 px-3 py-1.5 rounded-full">
-                <span className="w-2 h-2 bg-violet-600 rounded-full mr-2"></span>
-                New: AI-Powered Tools Available
-              </span>
-              <h1 className="text-4xl md:text-5xl font-extrabold mt-4 mb-4 leading-tight text-gray-900">
-                Supercharge Your <br />
-                Digital Workflow
-              </h1>
-              <p className="text-gray-500 text-base mb-4 max-w-lg">
-                Access premium AI tools, design assets, templates, and
-                productivity software—all in one place. Start creating faster
-                today.
-              </p>
-              <a
-                href="#"
-                className="text-violet-600 font-medium hover:underline text-sm block mb-6"
-              >
-                Explore Products
-              </a>
-              <div className="flex space-x-4 items-center">
-                <button className="bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-lg px-6 py-3 transition">
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-md">
+              <img
+                src="/banner.png"
+                alt="Workflow Mockup"
+                className="rounded-lg shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- STATS SECTION --- */}
+      <section className="bg-violet-600 text-white py-12">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div className="text-5xl font-extrabold">50K+</div>
+            <div className="text-violet-100 mt-2 text-sm">Active Users</div>
+          </div>
+          <div>
+            <div className="text-5xl font-extrabold">200+</div>
+            <div className="text-violet-100 mt-2 text-sm">Premium Tools</div>
+          </div>
+          <div>
+            <div className="text-5xl font-extrabold">4.9</div>
+            <div className="text-violet-100 mt-2 text-sm">Rating</div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- PRODUCTS SECTION --- */}
+      <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-3 text-gray-900">
+            Premium Digital Tools
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm">
+            Choose from our curated collection of premium digital products
+            designed to boost your productivity and creativity.
+          </p>
+
+          <div className="inline-flex rounded-full border border-gray-200 p-1 bg-white mt-8">
+            <button
+              className={`px-6 py-2 rounded-full font-medium transition text-sm ${activeTab === "products" ? "bg-violet-600 text-white shadow-sm" : "text-violet-600 hover:text-violet-700"}`}
+              onClick={() => setActiveTab("products")}
+            >
+              Products
+            </button>
+            <button
+              className={`px-6 py-2 rounded-full font-medium transition text-sm ${activeTab === "cart" ? "bg-violet-600 text-white shadow-sm" : "text-violet-600 hover:text-violet-700"}`}
+              onClick={() => setActiveTab("cart")}
+            >
+              Cart ({cart.length})
+            </button>
+          </div>
+        </div>
+
+        {activeTab === "products" ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {productsData.map((product) => {
+              const isInCart = cart.some((item) => item.id === product.id);
+
+              let tagClasses = "bg-violet-100 text-violet-700";
+              if (product.tagType === "warning")
+                tagClasses = "bg-orange-100 text-orange-700";
+              if (product.tagType === "success")
+                tagClasses = "bg-green-100 text-green-700";
+
+              return (
+                <div
+                  key={product.id}
+                  className="bg-white border border-gray-200 rounded-xl p-6 relative flex flex-col justify-between hover:shadow-sm transition-shadow"
+                >
+                  <div>
+                    <span
+                      className={`absolute top-4 right-4 text-xs font-bold px-2.5 py-1 rounded-full ${tagClasses}`}
+                    >
+                      {product.tag}
+                    </span>
+
+                    <div className="text-4xl mb-4 mt-2 flex items-center justify-start h-10">
+                      {product.icon.includes("/") ? (
+                        <img
+                          src={product.icon}
+                          alt={product.name}
+                          className="h-10 object-contain"
+                        />
+                      ) : (
+                        product.icon
+                      )}
+                    </div>
+
+                    <h3 className="text-lg font-bold mb-2 text-gray-900">
+                      {product.name}
+                    </h3>
+                    <p className="text-gray-500 text-xs mb-4">
+                      {product.description}
+                    </p>
+                    <div className="mb-4">
+                      <span className="text-2xl font-extrabold text-gray-900">
+                        ${product.price}
+                      </span>
+                      <span className="text-gray-500 text-sm ml-1">
+                        /{product.period}
+                      </span>
+                    </div>
+                    <ul className="space-y-2 mb-6">
+                      {product.features.map((feature, index) => (
+                        <li
+                          key={index}
+                          className="flex items-center text-xs text-gray-600"
+                        >
+                          <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />{" "}
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <button
+                    className={`w-full font-semibold rounded-lg py-2.5 transition ${isInCart ? "bg-green-500 text-white cursor-default" : "bg-violet-600 text-white hover:bg-violet-700"}`}
+                    onClick={() => !isInCart && addToCart(product)}
+                  >
+                    {isInCart ? "Added to Cart" : "Buy Now"}
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          /* CART SECTION */
+          <div className="max-w-3xl mx-auto">
+            {cart.length === 0 ? (
+              <div className="text-center py-16 text-gray-500 bg-gray-50 rounded-xl border border-dashed">
+                <ShoppingCart className="w-16 h-16 mx-auto mb-4 text-gray-300" />
+                <p className="text-xl font-semibold mb-2">
+                  Your cart is empty.
+                </p>
+                <button
+                  className="text-violet-600 font-medium hover:underline text-sm"
+                  onClick={() => setActiveTab("products")}
+                >
                   Explore Products
                 </button>
-                <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg px-6 py-3 flex items-center justify-center space-x-2 transition">
-                  <Play className="w-4 h-4 mr-1 fill-current" />
-                  <span>Watch Demo</span>
-                </button>
               </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-md">
-                <img
-                  src="/banner.png"
-                  alt="Workflow Mockup"
-                  className="rounded-lg shadow-sm"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-  
-  {/* --- STATS SECTION --- */}
-        <section className="bg-violet-600 text-white py-12">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-extrabold">50K+</div>
-              <div className="text-violet-100 mt-2 text-sm">Active Users</div>
-            </div>
-            <div>
-              <div className="text-5xl font-extrabold">200+</div>
-              <div className="text-violet-100 mt-2 text-sm">Premium Tools</div>
-            </div>
-            <div>
-              <div className="text-5xl font-extrabold">4.9</div>
-              <div className="text-violet-100 mt-2 text-sm">Rating</div>
-            </div>
-          </div>
-        </section>
-  
-        {/* --- PRODUCTS SECTION --- */}
-        <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3 text-gray-900">
-              Premium Digital Tools
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto text-sm">
-              Choose from our curated collection of premium digital products
-              designed to boost your productivity and creativity.
-            </p>
-  
-            <div className="inline-flex rounded-full border border-gray-200 p-1 bg-white mt-8">
-              <button
-                className={`px-6 py-2 rounded-full font-medium transition text-sm ${activeTab === "products" ? "bg-violet-600 text-white shadow-sm" : "text-violet-600 hover:text-violet-700"}`}
-                onClick={() => setActiveTab("products")}
-              >
-                Products
-              </button>
-              <button
-                className={`px-6 py-2 rounded-full font-medium transition text-sm ${activeTab === "cart" ? "bg-violet-600 text-white shadow-sm" : "text-violet-600 hover:text-violet-700"}`}
-                onClick={() => setActiveTab("cart")}
-              >
-                Cart ({cart.length})
-              </button>
-            </div>
-          </div>
-  
-          {activeTab === "products" ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {productsData.map((product) => {
-                const isInCart = cart.some((item) => item.id === product.id);
-  
-                let tagClasses = "bg-violet-100 text-violet-700";
-                if (product.tagType === "warning")
-                  tagClasses = "bg-orange-100 text-orange-700";
-                if (product.tagType === "success")
-                  tagClasses = "bg-green-100 text-green-700";
-  
-                return (
-                  <div
-                    key={product.id}
-                    className="bg-white border border-gray-200 rounded-xl p-6 relative flex flex-col justify-between hover:shadow-sm transition-shadow"
-                  >
-                    <div>
-                      <span
-                        className={`absolute top-4 right-4 text-xs font-bold px-2.5 py-1 rounded-full ${tagClasses}`}
-                      >
-                        {product.tag}
-                      </span>
-  
-                      <div className="text-4xl mb-4 mt-2 flex items-center justify-start h-10">
-                        {product.icon.includes("/") ? (
-                          <img
-                            src={product.icon}
-                            alt={product.name}
-                            className="h-10 object-contain"
-                          />
-                        ) : (
-                          product.icon
-                        )}
-                      </div>
-  
-                      <h3 className="text-lg font-bold mb-2 text-gray-900">
-                        {product.name}
-                      </h3>
-                      <p className="text-gray-500 text-xs mb-4">
-                        {product.description}
-                      </p>
-                      <div className="mb-4">
-                        <span className="text-2xl font-extrabold text-gray-900">
-                          ${product.price}
-                        </span>
-                        <span className="text-gray-500 text-sm ml-1">
-                          /{product.period}
-                        </span>
-                      </div>
-                      <ul className="space-y-2 mb-6">
-                        {product.features.map((feature, index) => (
-                          <li
-                            key={index}
-                            className="flex items-center text-xs text-gray-600"
-                          >
-                            <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />{" "}
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <button
-                      className={`w-full font-semibold rounded-lg py-2.5 transition ${isInCart ? "bg-green-500 text-white cursor-default" : "bg-violet-600 text-white hover:bg-violet-700"}`}
-                      onClick={() => !isInCart && addToCart(product)}
-                    >
-                      {isInCart ? "Added to Cart" : "Buy Now"}
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            /* CART SECTION */
-            <div className="max-w-3xl mx-auto">
-              {cart.length === 0 ? (
-                <div className="text-center py-16 text-gray-500 bg-gray-50 rounded-xl border border-dashed">
-                  <ShoppingCart className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-                  <p className="text-xl font-semibold mb-2">
-                    Your cart is empty.
-                  </p>
-                  <button
-                    className="text-violet-600 font-medium hover:underline text-sm"
-                    onClick={() => setActiveTab("products")}
-                  >
-                    Explore Products
-                  </button>
+            ) : (
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <div className="text-sm font-semibold text-gray-900 mb-4">
+                  Your Cart
                 </div>
-              ) : (
-                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                  <div className="text-sm font-semibold text-gray-900 mb-4">
-                    Your Cart
-                  </div>
-                  <div className="divide-y divide-gray-100">
-                    {cart.map((item) => (
-                      <div
-                        key={item.id}
-                        className="py-4 flex justify-between items-center"
-                      >
-                        <div className="flex items-center space-x-4">
-                          {/* Updated to handle both PNG paths and emoji placeholders in the cart */}
-                          <span className="text-3xl flex items-center justify-center w-8 h-8">
-                            {item.icon.includes("/") ? (
-                              <img
-                                src={item.icon}
-                                alt={item.name}
-                                className="h-8 object-contain"
-                              />
-                            ) : (
-                              item.icon
-                            )}
-                          </span>
-  
-                          <div>
-                            <div className="font-bold text-gray-900 text-sm">
-                              {item.name}
-                            </div>
-                            <div className="text-xs text-gray-500">
-                              ${item.price}
-                            </div>
+                <div className="divide-y divide-gray-100">
+                  {cart.map((item) => (
+                    <div
+                      key={item.id}
+                      className="py-4 flex justify-between items-center"
+                    >
+                      <div className="flex items-center space-x-4">
+                        {/* Updated to handle both PNG paths and emoji placeholders in the cart */}
+                        <span className="text-3xl flex items-center justify-center w-8 h-8">
+                          {item.icon.includes("/") ? (
+                            <img
+                              src={item.icon}
+                              alt={item.name}
+                              className="h-8 object-contain"
+                            />
+                          ) : (
+                            item.icon
+                          )}
+                        </span>
+
+                        <div>
+                          <div className="font-bold text-gray-900 text-sm">
+                            {item.name}
+                          </div>
+                          <div className="text-xs text-gray-500">
+                            ${item.price}
                           </div>
                         </div>
-                        <button
-                          className="text-red-500 text-xs font-semibold hover:underline"
-                          onClick={() => removeFromCart(item.id)}
-                        >
-                          Remove
-                        </button>
                       </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 pt-4 flex justify-between items-center text-sm">
-                    <span className="text-gray-500">Total:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      ${cart.reduce((sum, item) => sum + item.price, 0)}
-                    </span>
-                  </div>
-                  <button
-                    className="w-full bg-violet-600 text-white font-semibold rounded-lg py-3 mt-4 hover:bg-violet-700 transition text-sm"
-                    onClick={handleCheckout}
-                  >
-                    Proceed To Checkout
-                  </button>
+                      <button
+                        className="text-red-500 text-xs font-semibold hover:underline"
+                        onClick={() => removeFromCart(item.id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
                 </div>
-              )}
-            </div>
-          )}
-        </section>
-  
-  {/* --- STEPS SECTION --- */}
-        <section className="bg-white py-16 md:py-24 border-t border-gray-50">
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-2 text-gray-900">
-              Get Started In 3 Steps
-            </h2>
-            <p className="text-gray-500 text-sm mb-12">
-              Start using premium digital tools in minutes, not hours.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Step 1 */}
-              <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
-                <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
-                  01
-                </span>
-                <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
-                  <User className="w-6 h-6" />
-                </div>
-                <h3 className="text-base font-bold mb-2 text-gray-900">
-                  Create Account
-                </h3>
-                <p className="text-gray-500 text-xs leading-relaxed">
-                  Sign up for free in seconds. No credit card required to get
-                  started.
-                </p>
-              </div>
-  
-              {/* Step 2 */}
-              <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
-                <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
-                  02
-                </span>
-                <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
-                  <Box className="w-6 h-6" />
-                </div>
-                <h3 className="text-base font-bold mb-2 text-gray-900">
-                  Choose Products
-                </h3>
-                <p className="text-gray-500 text-xs leading-relaxed">
-                  Browse our catalog and select the tools that fit your needs.
-                </p>
-              </div>
-  
-              {/* Step 3 */}
-              <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
-                <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
-                  03
-                </span>
-                <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
-                  <Rocket className="w-6 h-6" />
-                </div>
-                <h3 className="text-base font-bold mb-2 text-gray-900">
-                  Start Creating
-                </h3>
-                <p className="text-gray-500 text-xs leading-relaxed">
-                  Download and start using your premium tools immediately.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        {/* --- PRICING SECTION --- */}
-        <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-2 text-gray-900">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-gray-500 text-sm">
-              Choose the plan that fits your needs. Upgrade or downgrade anytime.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            {/* Starter */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col justify-between h-full hover:shadow-sm transition">
-              <div>
-                <h3 className="text-lg font-bold mb-1 text-gray-900">Starter</h3>
-                <p className="text-gray-400 text-xs mb-4">
-                  Perfect for getting started
-                </p>
-                <div className="mb-6">
-                  <span className="text-3xl font-extrabold text-gray-900">
-                    $0
+                <div className="mt-6 pt-4 flex justify-between items-center text-sm">
+                  <span className="text-gray-500">Total:</span>
+                  <span className="text-lg font-bold text-gray-900">
+                    ${cart.reduce((sum, item) => sum + item.price, 0)}
                   </span>
-                  <span className="text-gray-500 text-xs"> /Month</span>
                 </div>
-                <ul className="space-y-3 mb-6 text-xs text-gray-600">
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Access to 10
-                    free tools
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Basic
-                    templates
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Community
-                    support
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> 1 project
-                    per month
-                  </li>
-                </ul>
+                <button
+                  className="w-full bg-violet-600 text-white font-semibold rounded-lg py-3 mt-4 hover:bg-violet-700 transition text-sm"
+                  onClick={handleCheckout}
+                >
+                  Proceed To Checkout
+                </button>
               </div>
-              <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg py-2.5 transition text-sm">
-                Get Started Free
-              </button>
-            </div>
-  
-            {/* Pro */}
-            <div className="bg-violet-600 text-white rounded-xl p-8 flex flex-col justify-between h-full relative shadow-lg">
-              <span className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
-                Most Popular
-              </span>
-              <div>
-                <h3 className="text-lg font-bold mb-1">Pro</h3>
-                <p className="text-violet-200 text-xs mb-4">
-                  Best for professionals
-                </p>
-                <div className="mb-6">
-                  <span className="text-3xl font-extrabold">$29</span>
-                  <span className="text-violet-200 text-xs"> /Month</span>
-                </div>
-                <ul className="space-y-3 mb-6 text-xs">
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Access to
-                    all premium tools
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Unlimited
-                    templates
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Priority
-                    support
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Unlimited
-                    projects
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Cloud sync
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-yellow-300 mr-2" /> Advanced
-                    analytics
-                  </li>
-                </ul>
-              </div>
-              <button className="bg-white text-violet-600 hover:bg-gray-50 font-semibold rounded-lg py-2.5 transition text-sm">
-                Start Pro Trial
-              </button>
-            </div>
-  
-            {/* Enterprise */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col justify-between h-full hover:shadow-sm transition">
-              <div>
-                <h3 className="text-lg font-bold mb-1 text-gray-900">
-                  Enterprise
-                </h3>
-                <p className="text-gray-400 text-xs mb-4">
-                  For teams and businesses
-                </p>
-                <div className="mb-6">
-                  <span className="text-3xl font-extrabold text-gray-900">
-                    $99
-                  </span>
-                  <span className="text-gray-500 text-xs"> /Month</span>
-                </div>
-                <ul className="space-y-3 mb-6 text-xs text-gray-600">
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Everything
-                    in Pro
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Team
-                    collaboration
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Custom
-                    integrations
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Dedicated
-                    support
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> SLA
-                    guarantee
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="w-4 h-4 text-green-500 mr-2" /> Custom
-                    branding
-                  </li>
-                </ul>
-              </div>
-              <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg py-2.5 transition text-sm">
-                Contact Sales
-              </button>
-            </div>
+            )}
           </div>
-        </section>
+        )}
+      </section>
 
-        {/* --- CTA SECTION --- */}
+      {/* --- STEPS SECTION --- */}
+      <section className="bg-white py-16 md:py-24 border-t border-gray-50">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">
+            Get Started In 3 Steps
+          </h2>
+          <p className="text-gray-500 text-sm mb-12">
+            Start using premium digital tools in minutes, not hours.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
+              <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
+                01
+              </span>
+              <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
+                <User className="w-6 h-6" />
+              </div>
+              <h3 className="text-base font-bold mb-2 text-gray-900">
+                Create Account
+              </h3>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Sign up for free in seconds. No credit card required to get
+                started.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
+              <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
+                02
+              </span>
+              <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
+                <Box className="w-6 h-6" />
+              </div>
+              <h3 className="text-base font-bold mb-2 text-gray-900">
+                Choose Products
+              </h3>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Browse our catalog and select the tools that fit your needs.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 relative text-center">
+              <span className="absolute top-4 right-4 bg-violet-600 text-white text-xs w-6 h-6 flex items-center justify-center rounded-full font-bold">
+                03
+              </span>
+              <div className="bg-violet-50 text-violet-600 w-12 h-12 flex items-center justify-center rounded-full mx-auto mb-4 mt-2">
+                <Rocket className="w-6 h-6" />
+              </div>
+              <h3 className="text-base font-bold mb-2 text-gray-900">
+                Start Creating
+              </h3>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Download and start using your premium tools immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- PRICING SECTION --- */}
+      <section className="py-16 md:py-24 max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">
+            Simple, Transparent Pricing
+          </h2>
+          <p className="text-gray-500 text-sm">
+            Choose the plan that fits your needs. Upgrade or downgrade anytime.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {/* Starter */}
+          <div className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col justify-between h-full hover:shadow-sm transition">
+            <div>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">Starter</h3>
+              <p className="text-gray-400 text-xs mb-4">
+                Perfect for getting started
+              </p>
+              <div className="mb-6">
+                <span className="text-3xl font-extrabold text-gray-900">
+                  $0
+                </span>
+                <span className="text-gray-500 text-xs"> /Month</span>
+              </div>
+              <ul className="space-y-3 mb-6 text-xs text-gray-600">
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Access to 10
+                  free tools
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Basic
+                  templates
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Community
+                  support
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> 1 project
+                  per month
+                </li>
+              </ul>
+            </div>
+            <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg py-2.5 transition text-sm">
+              Get Started Free
+            </button>
+          </div>
+
+          {/* Pro */}
+          <div className="bg-violet-600 text-white rounded-xl p-8 flex flex-col justify-between h-full relative shadow-lg">
+            <span className="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">
+              Most Popular
+            </span>
+            <div>
+              <h3 className="text-lg font-bold mb-1">Pro</h3>
+              <p className="text-violet-200 text-xs mb-4">
+                Best for professionals
+              </p>
+              <div className="mb-6">
+                <span className="text-3xl font-extrabold">$29</span>
+                <span className="text-violet-200 text-xs"> /Month</span>
+              </div>
+              <ul className="space-y-3 mb-6 text-xs">
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-yellow-300 mr-2" /> Access to
+                  all premium tools
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-yellow-300 mr-2" /> Unlimited
+                  templates
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-yellow-300 mr-2" /> Priority
+                  support
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-yellow-300 mr-2" /> Unlimited
+                  projects
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-yellow-300 mr-2" /> Cloud sync
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-yellow-300 mr-2" /> Advanced
+                  analytics
+                </li>
+              </ul>
+            </div>
+            <button className="bg-white text-violet-600 hover:bg-gray-50 font-semibold rounded-lg py-2.5 transition text-sm">
+              Start Pro Trial
+            </button>
+          </div>
+
+          {/* Enterprise */}
+          <div className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col justify-between h-full hover:shadow-sm transition">
+            <div>
+              <h3 className="text-lg font-bold mb-1 text-gray-900">
+                Enterprise
+              </h3>
+              <p className="text-gray-400 text-xs mb-4">
+                For teams and businesses
+              </p>
+              <div className="mb-6">
+                <span className="text-3xl font-extrabold text-gray-900">
+                  $99
+                </span>
+                <span className="text-gray-500 text-xs"> /Month</span>
+              </div>
+              <ul className="space-y-3 mb-6 text-xs text-gray-600">
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Everything
+                  in Pro
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Team
+                  collaboration
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Custom
+                  integrations
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Dedicated
+                  support
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> SLA
+                  guarantee
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-500 mr-2" /> Custom
+                  branding
+                </li>
+              </ul>
+            </div>
+            <button className="border border-violet-600 text-violet-600 hover:bg-violet-50 font-semibold rounded-lg py-2.5 transition text-sm">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* --- CTA SECTION --- */}
       <section className="bg-violet-600 text-white py-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-3">
@@ -547,3 +546,127 @@ export default function App() {
           </p>
         </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <footer className="bg-[#0B0D17] text-white pt-16 pb-8">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-800 pb-12">
+          <div className="col-span-2 md:col-span-1">
+            <div className="text-xl font-bold text-white mb-4">DigiTools</div>
+            <p className="text-gray-400 text-xs leading-relaxed max-w-xs">
+              Premium digital tools for creators, professionals, and businesses.
+              Work smarter with our suite of powerful tools.
+            </p>
+          </div>
+
+          <div>
+            <div className="font-semibold text-sm mb-4">Product</div>
+            <ul className="text-gray-400 text-xs space-y-3">
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Templates
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Integrations
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="font-semibold text-sm mb-4">Company</div>
+            <ul className="text-gray-400 text-xs space-y-3">
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Press
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="font-semibold text-sm mb-4">Resources</div>
+            <ul className="text-gray-400 text-xs space-y-3">
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Help Center
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Community
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="font-semibold text-sm mb-4">Social Links</div>
+            <div className="flex space-x-4 text-gray-400">
+              <a href="#" className="hover:text-white transition">
+                <FaYoutube className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-white transition">
+                <FaFacebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="hover:text-white transition">
+                <FaTwitter className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs">
+          <div>© 2026 Digitools. All rights reserved.</div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="hover:text-white transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-white transition">
+              Cookies
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
